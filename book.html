@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book SPA Core Day | AV Training</title>
+  <meta name="description" content="Book your SPA Core Day course securely online.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">
+      <span>Professional Construction Training</span>
+      <b data-company>AV Training & Consultancy</b>
+    </a>
+
+    <div class="nav-links">
+      <a href="spa-core-day.html">SPA Core Day</a>
+      <a href="ecs-labourer-card.html">ECS Card</a>
+      <a href="courses.html">Courses</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn-primary" href="book.html">Book Now</a>
+    </div>
+  </div>
+</nav>
+
+  <main class="section">
+    <div class="container booking-panel">
+      <div class="reveal show">
+        <p class="eyebrow">Secure online booking</p>
+        <h1>Book Your Course</h1>
+
+        <p>
+          Choose your delivery method and date. The booking form will open the correct secure Stripe Checkout page for
+          either Live Online or Classroom training.
+        </p>
+
+        <div class="booking-steps">
+          <div><span>1</span> Choose training type</div>
+          <div><span>2</span> Select course date</div>
+          <div><span>3</span> Enter your details</div>
+          <div><span>4</span> Pay securely by card</div>
+        </div>
+
+        <div class="summary-card">
+          <h3>Your selection</h3>
+          <div id="bookingSummary">
+            <div><strong>Course:</strong> SPA Health & Safety Core Day</div>
+            <div><strong>Delivery:</strong> Live Online via Microsoft Teams</div>
+            <div><strong>Date:</strong> Please select a date</div>
+            <div><strong>Price:</strong> £154 including VAT</div>
+          </div>
+        </div>
+
+        <div class="secure-list">
+          <div>✅ Secure card payment through Stripe</div>
+          <div>✅ Online and classroom bookings separated</div>
+          <div>✅ Payment receipt from Stripe</div>
+          <div>✅ Course information and joining instructions</div>
+        </div>
+      </div>
+
+      <form id="bookingForm" class="form-card reveal show">
+        <div class="form-grid">
+          <label>
+            Training type
+            <select id="trainingType" name="type" required>
+              <option value="Online">Live Online - Microsoft Teams</option>
+              <option value="Classroom">Classroom - West Thames College</option>
+            </select>
+          </label>
+
+          <label>
+            Course date
+            <select id="bookingDate" name="date" required></select>
+          </label>
+
+          <label>
+            Name
+            <input name="name" required placeholder="Your full name">
+          </label>
+
+          <label>
+            Phone
+            <input name="phone" required placeholder="Your phone number">
+          </label>
+
+          <label>
+            Email
+            <input name="email" type="email" required placeholder="Your email address">
+          </label>
+
+          <label>
+            Number of places
+            <select name="places" required>
+              <option value="1">1 place</option>
+              <option value="2">2 places</option>
+              <option value="3">3 places</option>
+              <option value="4">4 places</option>
+              <option value="5+">5+ places</option>
+            </select>
+          </label>
+
+          <label class="full">
+            Additional information
+            <textarea name="message" rows="4" placeholder="Company booking, accessibility needs or any other information."></textarea>
+          </label>
+
+          <p class="payment-note full">
+            Card payments are processed securely by Stripe. We do not store card details on this website.
+          </p>
+
+          <button id="paymentButton" class="btn btn-primary full" type="submit">Proceed to Secure Payment</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <h3 data-company>AV Training & Consultancy</h3>
+      <p>Professional construction training with clear guidance and a friendly approach.</p>
+    </div>
+
+    <div>
+      <h4>Courses</h4>
+      <p>
+        SPA Core Day<br>
+        SMSTS - Coming Soon<br>
+        SSSTS - Coming Soon<br>
+        First Aid - Coming Soon
+      </p>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <p>
+        <a data-phone href="#">07400 000000</a><br>
+        <a data-email href="#">info@</a><br>
+        West Thames College
+      </p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <p>
+        <a href="book.html">Book Now</a><br>
+        <a href="contact.html">Contact</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+  <script src="js/config.js"></script>
+<script src="js/calendar.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
