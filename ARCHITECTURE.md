@@ -252,8 +252,10 @@ POST /webhooks/stripe
 - An array containing one record per delegate.
 - Optional additional information.
 
+The backend derives quantity from the delegate array and derives price from the stored course session.
 
 ### Booking status
+
 The Stripe success URL includes `{CHECKOUT_SESSION_ID}`. The frontend uses that value to request minimal verified status from the backend. A redirect by itself never confirms payment.
 
 ## Stripe Checkout Flow
