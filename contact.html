@@ -32,20 +32,80 @@
       <a href="ecs-labourer-card.html">ECS Card</a>
       <a href="courses.html">Courses</a>
       <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
       <a class="btn btn-primary" href="book.html">Book Now</a>
     </div>
   </div>
 </nav>
 
   <main class="section">
-    <div class="container">
+    <div class="container contact-layout">
       <div class="panel">
         <p class="eyebrow">AV Training</p>
-        <h1>Contact</h1>
-        <p>Contact AV Training & Consultancy for course bookings, group enquiries and training information.</p>
+        <h1>Contact us</h1>
+        <p>Contact AV Training & Consultancy for course bookings, group training and course information.</p>
+        <div class="contact-options" aria-label="AV Training contact details">
+          <a class="contact-option" data-email href="#">
+            <span>Send an enquiry</span>
+            <strong>info@avtrainingandconsultancy.co.uk</strong>
+          </a>
+          <a class="contact-option" data-phone href="#">
+            <span>Mobile</span>
+            <strong>07337 146719</strong>
+          </a>
+          <a class="contact-option" data-landline href="#">
+            <span>Landline</span>
+            <strong>020 3536 5837</strong>
+          </a>
+        </div>
         <a class="btn btn-primary" href="book.html">Book Your Course</a>
       </div>
+
+      <form class="form-card" id="contactForm" novalidate>
+        <p class="eyebrow">Online enquiry</p>
+        <h2>Send us a message</h2>
+        <p>Complete the form and your enquiry will be sent directly to AV Training & Consultancy.</p>
+
+        <div class="form-grid">
+          <label>
+            Name
+            <input id="contactName" name="name" type="text" maxlength="100" autocomplete="name" required>
+          </label>
+
+          <label>
+            Email
+            <input id="contactEmail" name="email" type="email" maxlength="254" autocomplete="email" required>
+          </label>
+
+          <label>
+            Telephone (optional)
+            <input id="contactPhone" name="phone" type="tel" maxlength="40" autocomplete="tel">
+          </label>
+
+          <label>
+            Enquiry type
+            <select id="contactSubject" name="subject" required>
+              <option value="">Please select</option>
+              <option value="Course booking">Course booking</option>
+              <option value="Group training">Group training</option>
+              <option value="General enquiry">General enquiry</option>
+            </select>
+          </label>
+
+          <label class="full">
+            Message
+            <textarea id="contactMessage" name="message" rows="6" maxlength="3000" required></textarea>
+          </label>
+        </div>
+
+        <label class="spam-check" aria-hidden="true">
+          Website
+          <input name="website" type="text" tabindex="-1" autocomplete="off">
+        </label>
+
+        <p class="contact-privacy">We will only use your details to respond to your enquiry.</p>
+        <div id="contactStatus" class="form-message" role="status" aria-live="polite" hidden></div>
+        <button id="contactSubmit" class="btn btn-primary" type="submit">Send Enquiry</button>
+      </form>
     </div>
   </main>
 
@@ -91,5 +151,6 @@
   <script src="js/config.js"></script>
 <script src="js/calendar.js"></script>
 <script src="js/main.js"></script>
+<script src="js/contact-form.js"></script>
 </body>
 </html>

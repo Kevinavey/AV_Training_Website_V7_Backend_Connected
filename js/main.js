@@ -8,17 +8,21 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
   document.querySelectorAll("[data-email]").forEach((element) => {
-    element.textContent = SITE_CONFIG.email;
-    element.href = `mailto:${SITE_CONFIG.email}`;
+    const value = element.querySelector("strong") || element;
+    value.textContent = SITE_CONFIG.email;
+    element.href = "contact.html#contactForm";
+    element.title = "Open the enquiry form";
   });
 
   document.querySelectorAll("[data-phone]").forEach((element) => {
-    element.textContent = SITE_CONFIG.phone;
+    const value = element.querySelector("strong") || element;
+    value.textContent = SITE_CONFIG.phone;
     element.href = `tel:${SITE_CONFIG.phone.replace(/\s/g, "")}`;
   });
 
   document.querySelectorAll("[data-landline]").forEach((element) => {
-    element.textContent = SITE_CONFIG.landline;
+    const value = element.querySelector("strong") || element;
+    value.textContent = SITE_CONFIG.landline;
     element.href = `tel:${SITE_CONFIG.landline.replace(/\s/g, "")}`;
   });
 

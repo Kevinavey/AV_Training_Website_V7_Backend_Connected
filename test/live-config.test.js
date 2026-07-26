@@ -15,7 +15,11 @@ function loadSiteConfig() {
 test("public booking endpoints use HTTPS and do not point to localhost", () => {
   const config = loadSiteConfig();
 
-  for (const endpoint of [config.courseSessionsUrl, config.backendUrl]) {
+  for (const endpoint of [
+    config.courseSessionsUrl,
+    config.backendUrl,
+    config.contactUrl
+  ]) {
     assert.match(endpoint, /^https:\/\//);
     assert.doesNotMatch(endpoint, /localhost|127\.0\.0\.1/);
   }
@@ -25,6 +29,8 @@ test("course sessions and checkout use the same deployed backend", () => {
   const config = loadSiteConfig();
   const sessionsOrigin = new URL(config.courseSessionsUrl).origin;
   const checkoutOrigin = new URL(config.backendUrl).origin;
+  const contactOrigin = new URL(config.contactUrl).origin;
 
   assert.equal(sessionsOrigin, checkoutOrigin);
+  assert.equal(sessionsOrigin, contactOrigin);
 });

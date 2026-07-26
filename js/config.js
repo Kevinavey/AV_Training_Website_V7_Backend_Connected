@@ -10,6 +10,7 @@ const SITE_CONFIG = {
   currency: "£",
   courseSessionsUrl: "https://av-training-backend.onrender.com/api/course-sessions",
   backendUrl: "https://av-training-backend.onrender.com/create-checkout-session",
+  contactUrl: "https://av-training-backend.onrender.com/api/contact",
 
   stripeLinks: {
     online: "https://buy.stripe.com/eVqfZjddLca0eImaE42Ry02",
