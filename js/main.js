@@ -15,15 +15,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.querySelectorAll("[data-phone]").forEach((element) => {
     element.textContent = SITE_CONFIG.phone;
     element.href = `tel:${SITE_CONFIG.phone.replace(/\s/g, "")}`;
+  });
 
-    if (SITE_CONFIG.landline) {
-      const lineBreak = document.createElement("br");
-      const landline = document.createElement("a");
-      landline.textContent = SITE_CONFIG.landline;
-      landline.href = `tel:${SITE_CONFIG.landline.replace(/\s/g, "")}`;
-      landline.dataset.landline = "";
-      element.after(lineBreak, landline);
-    }
+  document.querySelectorAll("[data-landline]").forEach((element) => {
+    element.textContent = SITE_CONFIG.landline;
+    element.href = `tel:${SITE_CONFIG.landline.replace(/\s/g, "")}`;
   });
 
   document.querySelectorAll("[data-whatsapp]").forEach((element) => {

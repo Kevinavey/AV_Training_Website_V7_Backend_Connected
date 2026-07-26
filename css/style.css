@@ -27,6 +27,51 @@ a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; }
 .container { width: min(1180px, 92%); margin: 0 auto; }
 
+.contact-bar {
+  background: var(--primary-dark);
+  color: var(--white);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.contact-bar-inner {
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.contact-bar a {
+  display: inline-flex;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+
+.contact-bar a:hover {
+  opacity: 0.78;
+}
+
+.contact-bar-phones {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.contact-label {
+  color: #a7f3d0;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 .nav {
   position: sticky;
   top: 0;
@@ -727,6 +772,20 @@ img { max-width: 100%; display: block; }
 .reveal.show { opacity: 1; transform: none; }
 
 @media (max-width: 1000px) {
+  .contact-bar-inner {
+    min-height: 44px;
+    justify-content: center;
+    gap: 8px 18px;
+    padding: 6px 0;
+    flex-wrap: wrap;
+  }
+
+  .contact-bar-phones {
+    gap: 8px 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .hero-grid,
   .about-grid,
   .booking-panel,
@@ -760,6 +819,23 @@ img { max-width: 100%; display: block; }
   .confirmation-details { grid-template-columns: 1fr; }
   .confirmation-heading { grid-template-columns: 1fr; }
   .confirmation-actions .btn { width: 100%; }
+}
+
+@media (max-width: 620px) {
+  .contact-bar {
+    font-size: 0.74rem;
+  }
+
+  .contact-bar-inner {
+    align-items: center;
+    flex-direction: column;
+    gap: 3px;
+    padding: 7px 0;
+  }
+
+  .contact-label {
+    font-size: 0.62rem;
+  }
 }
 
 

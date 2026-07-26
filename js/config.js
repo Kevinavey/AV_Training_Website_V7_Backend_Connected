@@ -1,7 +1,7 @@
 const SITE_CONFIG = {
   companyName: "AV Training & Consultancy",
   tagline: "Professional Construction Training",
-  phone: "07337146719",
+  phone: "07337 146719",
   landline: "020 3536 5837",
   email: "info@avtrainingandconsultancy.co.uk",
   whatsappNumber: "07337146719",
