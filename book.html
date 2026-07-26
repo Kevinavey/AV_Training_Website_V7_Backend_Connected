@@ -14,9 +14,8 @@
 <body>
   <nav class="nav">
   <div class="container nav-inner">
-    <a class="brand" href="index.html">
-      <span>Professional Construction Training</span>
-      <b data-company>AV Training & Consultancy</b>
+    <a class="brand" href="index.html" aria-label="AV Training & Consultancy home">
+      <img src="images/av-training-consultancy-logo.png" alt="AV Training & Consultancy">
     </a>
 
     <div class="nav-links">
@@ -54,7 +53,8 @@
             <div><strong>Course:</strong> SPA Health & Safety Core Day</div>
             <div><strong>Delivery:</strong> Live Online via Microsoft Teams</div>
             <div><strong>Date:</strong> Please select a date</div>
-            <div><strong>Price:</strong> £154 including VAT</div>
+            <div><strong>Available seats:</strong> Loading…</div>
+            <div><strong>Price:</strong> Loading…</div>
           </div>
         </div>
 
@@ -82,35 +82,51 @@
           </label>
 
           <label>
-            Name
-            <input name="name" required placeholder="Your full name">
+            Purchaser name
+            <input id="purchaserName" name="purchaserName" required autocomplete="name" placeholder="Your full name">
           </label>
 
           <label>
             Phone
-            <input name="phone" required placeholder="Your phone number">
+            <input id="purchaserPhone" name="purchaserPhone" type="tel" required autocomplete="tel" placeholder="Your phone number">
           </label>
 
           <label>
             Email
-            <input name="email" type="email" required placeholder="Your email address">
+            <input id="purchaserEmail" name="purchaserEmail" type="email" required autocomplete="email" placeholder="Your email address">
           </label>
 
           <label>
-            Number of places
-            <select name="places" required>
-              <option value="1">1 place</option>
-              <option value="2">2 places</option>
-              <option value="3">3 places</option>
-              <option value="4">4 places</option>
-              <option value="5+">5+ places</option>
+            Number of delegates
+            <select id="delegateCount" name="delegateCount" required>
+              <option value="1">1 delegate</option>
+              <option value="2">2 delegates</option>
+              <option value="3">3 delegates</option>
+              <option value="4">4 delegates</option>
+              <option value="5">5 delegates</option>
+              <option value="6">6 delegates</option>
+              <option value="7">7 delegates</option>
+              <option value="8">8 delegates</option>
+              <option value="9">9 delegates</option>
+              <option value="10">10 delegates</option>
+              <option value="11">11 delegates</option>
+              <option value="12">12 delegates</option>
             </select>
           </label>
 
+          <label class="full checkbox-label">
+            <input id="purchaserIsDelegate" name="purchaserIsDelegate" type="checkbox">
+            Use the purchaser's details for delegate one
+          </label>
+
+          <div id="delegateFields" class="delegate-fields full" aria-live="polite"></div>
+
           <label class="full">
             Additional information
-            <textarea name="message" rows="4" placeholder="Company booking, accessibility needs or any other information."></textarea>
+            <textarea id="additionalInformation" name="additionalInformation" rows="4" placeholder="Company booking, accessibility needs or any other information."></textarea>
           </label>
+
+          <div id="bookingError" class="form-message form-message-error full" role="alert" hidden></div>
 
           <p class="payment-note full">
             Card payments are processed securely by Stripe. We do not store card details on this website.
@@ -160,6 +176,7 @@
 
   <script src="js/config.js"></script>
 <script src="js/calendar.js"></script>
+<script src="js/booking-form.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,34 +1,33 @@
-const ONLINE_COURSE_DATES = [
-  {
-    date: "14 July 2026",
-    venue: "Live Online via Microsoft Teams",
-    spaces: 10,
-    price: 154
-  },
-  {
-    date: "28 July 2026",
-    venue: "Live Online via Microsoft Teams",
-    spaces: 8,
-    price: 154
+function requireCourseSession(value) {
+  if (
+    !value ||
+    typeof value.id !== "string" ||
+    typeof value.courseName !== "string" ||
+    !["online", "classroom"].includes(value.deliveryType) ||
+    Number.isNaN(Date.parse(value.startsAt)) ||
+    Number.isNaN(Date.parse(value.endsAt)) ||
+    !Number.isInteger(value.remainingSeats) ||
+    !Number.isInteger(value.unitPrice?.amountMinorUnits) ||
+    typeof value.unitPrice?.currency !== "string"
+  ) {
+    throw new Error("The course-session service returned invalid data.");
   }
-];
 
-const CLASSROOM_COURSE_DATES = [
-  {
-    date: "21 July 2026",
-    venue: "West Thames College",
-    spaces: 12,
-    price: 154
-  },
-  {
-    date: "4 August 2026",
-    venue: "West Thames College",
-    spaces: 10,
-    price: 154
+  return value;
+}
+
+async function loadCourseSessions() {
+  const response = await fetch(SITE_CONFIG.courseSessionsUrl, {
+    headers: { Accept: "application/json" }
+  });
+  if (!response.ok) {
+    throw new Error("Course dates are temporarily unavailable.");
   }
-];
 
-const COURSE_DATES = [
-  ...ONLINE_COURSE_DATES.map((item) => ({ ...item, type: "Online" })),
-  ...CLASSROOM_COURSE_DATES.map((item) => ({ ...item, type: "Classroom" }))
-];
+  const data = await response.json();
+  if (!Array.isArray(data.courseSessions)) {
+    throw new Error("The course-session service returned invalid data.");
+  }
+
+  return data.courseSessions.map(requireCourseSession);
+}

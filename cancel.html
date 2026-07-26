@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Booking Cancelled | AV Training</title>
+  <meta name="description" content="Your AV Training payment was cancelled and the booking was not completed.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -12,9 +13,8 @@
 <body>
   <nav class="nav">
   <div class="container nav-inner">
-    <a class="brand" href="index.html">
-      <span>Professional Construction Training</span>
-      <b data-company>AV Training & Consultancy</b>
+    <a class="brand" href="index.html" aria-label="AV Training & Consultancy home">
+      <img src="images/av-training-consultancy-logo.png" alt="AV Training & Consultancy">
     </a>
     <div class="nav-links">
       <a href="spa-core-day.html">SPA Core Day</a>
@@ -28,11 +28,13 @@
 </nav>
   <main class="section">
     <div class="container">
-      <div class="cta-box">
+      <div class="confirmation-card confirmation-state cancellation-card">
+        <div class="confirmation-icon confirmation-icon-warning" aria-hidden="true">×</div>
         <p class="eyebrow">Payment cancelled</p>
-        <h2>Your booking was not completed.</h2>
-        <p>You can return to the booking page and try again when ready.</p>
-        <a class="btn btn-primary" href="book.html">Return to Booking</a>
+        <h1>Your booking was not completed.</h1>
+        <p>No payment has been taken.</p>
+        <p>Your selected seats are still subject to availability, so please restart the booking when you are ready.</p>
+        <a class="btn btn-primary" href="book.html">Try Booking Again</a>
       </div>
     </div>
   </main>

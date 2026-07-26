@@ -1,19 +1,20 @@
-AV Training Website V7 Backend Connected
+AV Training Website V7 Launch Connected
 
-This version connects the booking form to the Node.js backend.
+This version connects the booking form and live course availability to the
+deployed Node.js backend.
 
 Flow:
 1. User completes booking form.
-2. Website sends booking details to http://localhost:3000/create-checkout-session.
-3. Backend creates a Stripe Checkout session.
-4. User is redirected to Stripe.
-5. Stripe redirects to success.html or cancel.html.
-
-You must keep the backend terminal running:
-cd ~/Desktop/AV_Training_Backend_Starter/server
-npm start
+2. Website loads course dates and remaining seats from the deployed backend.
+3. Website sends booking details to the deployed backend.
+4. Backend creates a Stripe Checkout session.
+5. User is redirected to Stripe.
+6. Stripe redirects to success.html or cancel.html.
 
 Important:
-- This version needs the backend running on port 3000.
-- Backend .env needs your real STRIPE_SECRET_KEY.
-- Backend index.js needs your real Stripe PRICE IDs, not payment links.
+- The deployed backend must be live on Render.
+- Render must contain the required Stripe, database, email and website
+  environment variables.
+- Google Calendar variables can be left unconfigured while Calendar
+  invitations are postponed; payment confirmation and email fulfilment remain
+  separate from Calendar fulfilment.
