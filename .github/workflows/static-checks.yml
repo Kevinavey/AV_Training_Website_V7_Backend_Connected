@@ -1,0 +1,27 @@
+name: Static website checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  javascript:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Check JavaScript syntax
+        run: |
+          node --check js/config.js
+          node --check js/calendar.js
+          node --check js/booking-form.js
+          node --check js/confirmation-page.js
+          node --check js/contact-form.js
+          node --check js/main.js
