@@ -55,6 +55,14 @@ const SITE_CONFIG = {
     return true;
   }
 
+  function trackRelevantViewContent() {
+    if (/spa-core-day\.html$/.test(location.pathname)) {
+      track("ViewContent", { content_name: "SPA Core Day", content_type: "product" });
+    } else if (/book\.html$/.test(location.pathname)) {
+      track("ViewContent", { content_name: "SPA Core Day Booking", content_type: "product" });
+    }
+  }
+
   function showBanner() {
     if (getConsent() || document.querySelector("[data-meta-cookie-banner]")) return;
     const banner = document.createElement("div");
@@ -66,9 +74,7 @@ const SITE_CONFIG = {
     banner.querySelector("[data-cookie-accept]").addEventListener("click", () => {
       setConsent("accepted");
       init();
-      if (/spa-core-day\.html$/.test(location.pathname)) {
-        track("ViewContent", { content_name: "SPA Core Day", content_type: "product" });
-      }
+      trackRelevantViewContent();
       banner.remove();
     });
     banner.querySelector("[data-cookie-reject]").addEventListener("click", () => {
@@ -121,9 +127,7 @@ const SITE_CONFIG = {
     const consent = getConsent();
     if (consent === "accepted") {
       init();
-      if (/spa-core-day\.html$/.test(location.pathname)) {
-        track("ViewContent", { content_name: "SPA Core Day", content_type: "product" });
-      }
+      trackRelevantViewContent();
     } else if (!consent) {
       showBanner();
     }
