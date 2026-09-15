@@ -5,132 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Booking Confirmation | AV Training</title>
   <meta name="description" content="Review your AV Training booking confirmation and payment status.">
+  <meta name="robots" content="noindex,follow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="contact-bar">
-    <div class="container contact-bar-inner">
-      <div class="contact-item"><span class="contact-label">Email</span><a data-email href="#">info@avtrainingandconsultancy.co.uk</a></div>
-      <div class="contact-bar-phones">
-        <div class="contact-item"><span class="contact-label">Mobile</span><a data-phone href="#">07337 146719</a></div>
-        <div class="contact-item"><span class="contact-label">Landline</span><a data-landline href="#">020 3536 5837</a></div>
-      </div>
-    </div>
-  </div>
-  <nav class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html" aria-label="AV Training & Consultancy home">
-      <img src="images/av-training-consultancy-logo.png" alt="AV Training & Consultancy">
-    </a>
-    <div class="nav-links">
-      <a href="spa-core-day.html">SPA Core Day</a>
-      <a href="ecs-labourer-card.html">ECS Card</a>
-      <a href="courses.html">Courses</a>
-      <a href="about.html">About</a>
-      <a class="btn btn-primary" href="book.html">Book Now</a>
-    </div>
-  </div>
-</nav>
-  <main class="section">
-    <div class="container confirmation-shell">
-      <section id="confirmationLoading" class="confirmation-card confirmation-state" aria-live="polite">
-        <div class="loading-indicator" aria-hidden="true"></div>
-        <p class="eyebrow">Secure booking</p>
-        <h1>Loading your booking confirmation…</h1>
-        <p>Payment submitted — confirmation pending.</p>
-      </section>
-
-      <section id="confirmationContent" class="confirmation-card" hidden>
-        <div class="confirmation-heading">
-          <div class="confirmation-icon" aria-hidden="true">✓</div>
-          <div>
-            <p class="eyebrow">Thank you for your booking</p>
-            <h1 id="confirmationHeading">Your payment has been submitted.</h1>
-            <p id="confirmationIntroduction">Payment submitted — confirmation pending.</p>
-          </div>
-        </div>
-
-        <dl id="confirmationDetails" class="confirmation-details"></dl>
-
-        <div class="confirmation-delegates">
-          <h2>Delegates</h2>
-          <ol id="confirmationDelegates"></ol>
-        </div>
-
-        <div class="confirmation-next-steps">
-          <h2>What happens next?</h2>
-          <p id="confirmationEmailStatus">A confirmation email will arrive shortly.</p>
-          <p>Joining instructions for online training, or full venue details for classroom training, will follow.</p>
-          <p><strong>Keep your booking reference</strong> and include it if you need to contact us about this booking.</p>
-        </div>
-
-        <div class="confirmation-actions">
-          <a class="btn btn-primary" href="index.html">Back to Home</a>
-          <a class="btn btn-secondary" href="contact.html">Contact Us</a>
-        </div>
-      </section>
-
-      <section id="confirmationFailed" class="confirmation-card confirmation-state" role="alert" hidden>
-        <div class="confirmation-icon confirmation-icon-error" aria-hidden="true">×</div>
-        <p class="eyebrow">Payment unsuccessful</p>
-        <h1>Your booking could not be confirmed.</h1>
-        <p>The payment did not complete, so your booking is not confirmed. Please check your payment details and start a new booking, or contact us if you believe payment was taken.</p>
-        <div class="confirmation-actions">
-          <a class="btn btn-primary" href="book.html">Try Booking Again</a>
-          <a class="btn btn-secondary" href="contact.html">Contact Us</a>
-        </div>
-      </section>
-
-      <section id="confirmationExpired" class="confirmation-card confirmation-state" role="alert" hidden>
-        <div class="confirmation-icon confirmation-icon-warning" aria-hidden="true">!</div>
-        <p class="eyebrow">Booking expired</p>
-        <h1>Your booking session has expired.</h1>
-        <p>No booking was confirmed. Any reserved seats have been released and current places remain subject to availability.</p>
-        <a class="btn btn-primary" href="book.html">Start a New Booking</a>
-      </section>
-
-      <section id="confirmationTimeout" class="confirmation-card confirmation-state" role="status" hidden>
-        <div class="confirmation-icon confirmation-icon-warning" aria-hidden="true">!</div>
-        <p class="eyebrow">Confirmation taking longer</p>
-        <h1>We are still waiting for payment confirmation.</h1>
-        <p>Do not make another payment. Please refresh this page shortly or check your confirmation email. Contact us if you need help.</p>
-        <div class="confirmation-actions">
-          <button class="btn btn-primary" type="button" onclick="window.location.reload()">Check Again</button>
-          <a class="btn btn-secondary" href="contact.html">Contact Us</a>
-        </div>
-      </section>
-
-      <section id="confirmationInvalid" class="confirmation-card confirmation-state" role="alert" hidden>
-        <div class="confirmation-icon confirmation-icon-warning" aria-hidden="true">!</div>
-        <p class="eyebrow">Booking details unavailable</p>
-        <h1>We could not display this booking reference.</h1>
-        <p>The link may be incomplete, the reference may be invalid, or this booking was completed in another browser.</p>
-        <p>If payment was taken, your booking remains safely recorded. Please check your confirmation email or contact us for help.</p>
-        <div class="confirmation-actions">
-          <a class="btn btn-primary" href="contact.html">Contact Us</a>
-          <a class="btn btn-secondary" href="index.html">Back to Home</a>
-        </div>
-      </section>
-    </div>
-  </main>
-  <footer class="footer">
-  <div class="container footer-grid">
-    <div>
-      <h3 data-company>AV Training & Consultancy</h3>
-      <p>Professional construction training with clear guidance and a friendly approach.</p>
-    </div>
-    <div><h4>Courses</h4><p>SPA Core Day<br>SMSTS - Coming Soon<br>SSSTS - Coming Soon<br>First Aid - Coming Soon</p></div>
-    <div><h4>Contact</h4><p><a data-phone href="#">07337 146719</a><br><a data-landline href="#">020 3536 5837</a><br><a data-email href="#">info@</a><br>West Thames College</p></div>
-    <div><h4>Quick Links</h4><p><a href="book.html">Book Now</a><br><a href="contact.html">Contact</a></p></div>
-  </div>
-</footer>
-  <script src="js/config.js"></script>
-  <script src="js/calendar.js"></script>
-  <script src="js/confirmation-page.js"></script>
-  <script src="js/main.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", () => { void ConfirmationPage.renderSuccessPage(); });</script>
-</body>
-</html>
+  <div class="contact-bar"><div class="container contact-bar-inner"><div class="contact-item"><span class="contact-label">Email</span><a data-email href="#">info@avtrainingandconsultancy.co.uk</a></div><div class="contact-bar-phones"><div class="contact-item"><span class="contact-label">Mobile</span><a data-phone href="#">07337 146719</a></div><div class="contact-item"><span class="contact-label">Landline</span><a data-landline href="#">020 3536 5837</a></div></div></div></div>
+  <nav class="nav"><div class="container nav-inner"><a class="brand" href="index.html" aria-label="AV Training & Consultancy home"><img src="images/av-training-consultancy-logo.png" alt="AV Training & Consultancy"></a><div class="nav-links"><a href="spa-core-day.html">SPA Core Day</a><a href="ecs-labourer-card.html">ECS Card</a><a href="courses.html">Courses</a><a href="about.html">About</a><a class="btn btn-primary" href="book.html">Book Now</a></div></div></nav>
+  <main class="section"><div class="container"><div class="panel"><p class="eyebrow">Booking confirmation</p><h1>Thank you for your booking</h1><div id="confirmationStatus"><p>We are confirming your payment and booking details…</p></div><div id="confirmationDetails"></div><div class="hero-actions"><a class="btn btn-primary" href="index.html">Return Home</a></div></div></div></main>
+  <footer class="footer"><div class="container footer-grid"><div><h3 data-company>AV Training & Consultancy</h3><p>Professional construction training with clear guidance and a friendly approach.</p></div><div><h4>Courses</h4><p>SPA Core Day<br>SMSTS - Coming Soon<br>SSSTS - Coming Soon<br>First Aid - Coming Soon</p></div><div><h4>Contact</h4><p><a data-phone href="#">07337 146719</a><br><a data-landline href="#">020 3536 5837</a><br><a data-email href="#">info@</a><br>West Thames College</p></div><div><h4>Quick Links</h4><p><a href="book.html">Book Now</a><br><a href="contact.html">Contact</a></p></div></div></footer>
+  <script src="js/config.js"></script><script src="js/confirmation.js"></script><script src="js/main.js"></script>
+</body></html>
