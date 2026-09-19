@@ -1172,3 +1172,33 @@ a.link-arrow{color:var(--accent-green)!important}
    max-width:620px!important;
  }
 }
+
+/* Balanced hero proportions — ~70% of original */
+@media (min-width: 761px){
+ .exact-hero{min-height:690px!important;padding:48px 0 44px!important}
+ .exact-hero h1{
+   font-size:clamp(3.05rem,4.35vw,4.4rem)!important;
+   line-height:.96!important;
+   max-width:720px!important;
+   margin-bottom:20px!important;
+ }
+ .exact-hero .ecs-hero-lead{
+   font-size:1rem!important;
+   line-height:1.48!important;
+   max-width:760px!important;
+   margin-bottom:22px!important;
+ }
+ .exact-hero .hero-actions{margin-bottom:26px!important}
+ .exact-hero .ecs-hero-cta{
+   min-width:360px!important;
+   width:auto!important;
+   padding:15px 24px!important;
+   font-size:1rem!important;
+   border-radius:12px!important;
+ }
+ .exact-hero .ecs-hero-facts{max-width:850px!important}
+ .exact-hero .ecs-hero-facts div{padding:15px 20px!important;min-height:100px!important}
+ .exact-hero .ecs-hero-facts strong{font-size:1rem!important}
+ .exact-hero .ecs-hero-facts span{font-size:.78rem!important}
+ .exact-hero .ecs-hero-facts i{font-size:1.35rem!important;margin-bottom:6px!important}
+}
