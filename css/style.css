@@ -1327,3 +1327,17 @@ a.link-arrow{color:var(--accent-green)!important}
  .mock-brand-words strong{font-size:.76rem}
  .mock-brand-words small{display:none}
 }
+
+
+/* Override legacy image-logo rules that were blanking the native header brand */
+.mock-header .mock-brand.mock-brand-text{
+  width:auto!important;
+  flex:0 0 auto!important;
+  min-width:0!important;
+  height:auto!important;
+}
+.mock-header .mock-brand.mock-brand-text .mock-av,
+.mock-header .mock-brand.mock-brand-text .mock-brand-words{
+  visibility:visible!important;
+  opacity:1!important;
+}
