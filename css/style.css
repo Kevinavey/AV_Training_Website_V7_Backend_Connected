@@ -1407,3 +1407,75 @@ a.link-arrow{color:var(--accent-green)!important}
  .mock-header .mock-brand-words strong{font-size:1rem!important}
  .mock-header .mock-brand-words small{font-size:.62rem!important}
 }
+
+
+/* Mobile hero optimisation — 2026-09-19 */
+@media (max-width:620px){
+  .mock-hero{
+    min-height:auto!important;
+    height:auto!important;
+    padding:0 0 24px!important;
+    background-position:68% center!important;
+  }
+  .mock-hero-content{
+    width:89%!important;
+    padding-top:38px!important;
+    padding-bottom:10px!important;
+  }
+  .mock-kicker{
+    font-size:.60rem!important;
+    letter-spacing:.20em!important;
+    margin-bottom:14px!important;
+  }
+  .mock-hero h1{
+    font-size:clamp(2.35rem,10.8vw,3rem)!important;
+    line-height:.98!important;
+    letter-spacing:-.035em!important;
+    margin-bottom:18px!important;
+    max-width:100%!important;
+  }
+  .mock-hero h2{
+    font-size:1.02rem!important;
+    line-height:1.35!important;
+    margin-bottom:18px!important;
+    max-width:95%!important;
+  }
+  .mock-lead{
+    font-size:.86rem!important;
+    line-height:1.48!important;
+    margin-bottom:22px!important;
+    max-width:94%!important;
+  }
+  .mock-facts{
+    display:grid!important;
+    grid-template-columns:auto auto!important;
+    justify-content:start!important;
+    column-gap:18px!important;
+    row-gap:8px!important;
+    margin-bottom:20px!important;
+  }
+  .mock-facts div{
+    font-size:.76rem!important;
+    white-space:nowrap!important;
+  }
+  .mock-facts div:last-child{grid-column:1 / -1!important}
+  .mock-cta{
+    width:100%!important;
+    min-height:54px!important;
+    padding:14px 18px!important;
+    font-size:.92rem!important;
+    border-radius:7px!important;
+  }
+  .mock-tag{
+    margin:12px 0 0!important;
+    font-size:.72rem!important;
+  }
+  .mock-dots{bottom:10px!important}
+  .whatsapp-float{
+    width:50px!important;
+    height:50px!important;
+    right:12px!important;
+    bottom:12px!important;
+    font-size:1.3rem!important;
+  }
+}
