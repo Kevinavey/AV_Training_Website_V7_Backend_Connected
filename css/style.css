@@ -1049,3 +1049,39 @@ button:disabled {
   .ecs-hero-facts div:nth-child(-n+2) { border-bottom:1px solid rgba(255,255,255,.15); }
   .ecs-hero-cta { width:100%; }
 }
+
+/* Exact mockup pass */
+.exact-hero{
+ min-height:920px;padding:78px 0 58px;align-items:flex-start;
+ background:
+ radial-gradient(circle at 79% 31%,rgba(20,184,166,.23),transparent 35%),
+ linear-gradient(115deg,#021c1b 0%,#003f3a 58%,#08766c 100%);
+}
+.exact-hero::after{content:"";position:absolute;right:-11%;top:4%;width:47%;height:110%;background:linear-gradient(135deg,transparent 0 43%,rgba(0,25,25,.22) 43% 64%,transparent 64%);transform:skewX(-7deg)}
+.exact-hero .ecs-hero-content{max-width:1040px;width:min(1180px,88%);margin:0 auto}
+.exact-hero .ecs-kicker{font-size:.95rem;letter-spacing:.17em;margin-bottom:24px;color:#62e8d6}
+.exact-hero h1{font-size:clamp(4rem,7.1vw,7rem);line-height:.91;letter-spacing:-.055em;max-width:900px;margin-bottom:28px}
+.exact-hero h1 span{color:#35ddc7}
+.exact-hero .ecs-hero-lead{font-size:1.28rem;line-height:1.55;max-width:850px;margin-bottom:28px}
+.exact-hero .hero-actions{margin:0 0 34px}
+.exact-hero .ecs-hero-cta{border-radius:14px;background:#05d64b;padding:20px 32px;font-size:1.25rem;min-width:430px;justify-content:space-between}
+.exact-hero .ecs-hero-cta:hover{background:#00c744}
+.exact-hero .ecs-hero-facts{max-width:950px;grid-template-columns:repeat(4,1fr);border-radius:16px;margin-bottom:14px}
+.exact-hero .ecs-hero-facts div{padding:20px 26px;min-height:125px}
+.exact-hero .ecs-hero-facts i{display:block;color:#39e3cb;font-style:normal;font-size:1.7rem;margin-bottom:8px}
+.exact-hero .ecs-hero-facts strong{font-size:1.15rem;line-height:1.25}
+.exact-hero .ecs-hero-facts span{font-size:.9rem;margin-top:4px}
+.ecs-tagline{color:#d8e3e2;font-size:.9rem;margin:0}
+@media(min-width:1001px){
+ .home-nav .brand{flex-basis:390px}
+ .home-nav-links{display:flex!important}
+}
+@media(max-width:760px){
+ .exact-hero{min-height:auto;padding:52px 0}
+ .exact-hero .ecs-hero-content{width:88%}
+ .exact-hero h1{font-size:clamp(3rem,14vw,5rem)}
+ .exact-hero .ecs-hero-lead{font-size:1rem}
+ .exact-hero .ecs-hero-cta{min-width:0;width:100%;font-size:1rem}
+ .exact-hero .ecs-hero-facts{grid-template-columns:1fr 1fr}
+ .exact-hero .ecs-hero-facts div{padding:16px;min-height:105px}
+}
