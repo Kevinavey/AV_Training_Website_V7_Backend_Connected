@@ -979,3 +979,73 @@ button:disabled {
   opacity: 0.7;
   cursor: wait;
 }
+
+
+/* ECS-focused homepage hero */
+.home-nav .nav-inner { height: 82px; }
+.home-nav-links { gap: 34px; }
+.home-nav-links a { font-size: .95rem; }
+.ecs-hero {
+  position: relative;
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+  padding: 72px 0;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(7,25,24,.96) 0%, rgba(10,52,48,.91) 48%, rgba(15,118,110,.70) 100%),
+    url('../images/ecs-card.jpg') center right / cover no-repeat;
+}
+.ecs-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 0 52%;
+  background: radial-gradient(circle at 70% 50%, rgba(45,212,191,.22), transparent 58%);
+  pointer-events: none;
+}
+.ecs-hero-content { position: relative; z-index: 2; max-width: 820px; margin-left: 0; }
+.ecs-kicker {
+  margin: 0 0 18px;
+  color: #99f6e4;
+  font-size: .82rem;
+  font-weight: 900;
+  letter-spacing: .16em;
+}
+.ecs-hero h1 {
+  max-width: 850px;
+  margin: 0 0 22px;
+  color: #fff;
+  font-size: clamp(3.1rem, 6.2vw, 6.3rem);
+  line-height: .96;
+  letter-spacing: -.055em;
+}
+.ecs-hero h1 span { color: #5eead4; }
+.ecs-hero-lead { max-width: 720px; margin: 0 0 30px; color: #e2e8f0; font-size: 1.16rem; }
+.ecs-hero-facts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  max-width: 760px;
+  margin: 0 0 28px;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255,255,255,.08);
+  backdrop-filter: blur(10px);
+}
+.ecs-hero-facts div { padding: 16px 18px; border-right: 1px solid rgba(255,255,255,.15); }
+.ecs-hero-facts div:last-child { border-right: 0; }
+.ecs-hero-facts strong { display:block; color:#fff; font-size:1.12rem; }
+.ecs-hero-facts span { display:block; color:#cbd5e1; font-size:.76rem; margin-top:2px; }
+.ecs-hero-cta { padding: 16px 27px; background:#14b8a6; box-shadow:0 14px 32px rgba(0,0,0,.25); }
+.ecs-smallprint { max-width: 690px; margin: 18px 0 0; color:#94a3b8; font-size:.76rem; }
+@media (max-width: 760px) {
+  .home-nav .nav-inner { height: 68px; }
+  .home-nav .brand { min-width: 190px; max-width: 255px; }
+  .home-nav .nav-links { display:flex; gap:14px; font-size:.78rem; }
+  .ecs-hero { min-height:auto; padding:58px 0; background:linear-gradient(135deg,#071918 0%,#0f766e 100%); }
+  .ecs-hero h1 { font-size: clamp(2.65rem, 13vw, 4.5rem); }
+  .ecs-hero-facts { grid-template-columns:1fr 1fr; }
+  .ecs-hero-facts div:nth-child(2) { border-right:0; }
+  .ecs-hero-facts div:nth-child(-n+2) { border-bottom:1px solid rgba(255,255,255,.15); }
+  .ecs-hero-cta { width:100%; }
+}
