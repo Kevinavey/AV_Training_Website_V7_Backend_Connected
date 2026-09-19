@@ -1211,3 +1211,51 @@ a.link-arrow{color:var(--accent-green)!important}
  .top-company-name{font-size:.72rem;margin-right:0}
  .contact-bar-inner{gap:6px!important}
 }
+
+/* Approved construction-image redesign */
+.mock-header{height:110px;background:rgba(5,13,22,.98);color:#fff;position:relative;z-index:20}
+.mock-header-inner{height:100%;display:flex;align-items:center;gap:24px}
+.mock-brand{width:330px;flex:0 0 330px}
+.mock-brand img{width:100%;max-height:82px;object-fit:contain;filter:brightness(0) invert(1)}
+.mock-contact{margin-left:auto;display:flex;align-items:center;gap:22px}
+.mock-contact a{color:#fff;text-decoration:none;font-size:.78rem;white-space:nowrap}
+.mock-contact a:first-child{color:#fff}
+.mock-contact a::first-letter{color:#00d84a}
+.mock-about{color:#fff;text-decoration:none;font-weight:600;white-space:nowrap}
+.mock-contact-btn{color:#fff;text-decoration:none;border:2px solid #00d84a;border-radius:22px;padding:13px 25px;font-weight:700;white-space:nowrap}
+.mock-hero{position:relative;min-height:790px;overflow:hidden;background:
+ linear-gradient(90deg,rgba(4,13,24,.94) 0%,rgba(4,13,24,.72) 40%,rgba(4,13,24,.18) 72%),
+ url('../images/hero-construction.jpg') center/cover no-repeat,
+ url('../images/electrical-training.jpg') center/cover no-repeat,
+ linear-gradient(120deg,#071522,#27424a)}
+.mock-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,10,19,.45),transparent 62%)}
+.mock-hero-content{position:relative;z-index:2;padding-top:82px;color:#fff}
+.mock-kicker{letter-spacing:.22em;font-size:.88rem;margin:0 0 14px;color:#e5e7eb}
+.mock-hero h1{font-size:clamp(3rem,4.6vw,5rem);line-height:.98;letter-spacing:-.035em;max-width:900px;margin:0 0 12px;color:#fff}
+.mock-hero h1 span{color:#00d84a}
+.mock-hero h2{font-size:1.55rem;margin:0 0 22px;color:#fff}
+.mock-lead{font-size:1.12rem;line-height:1.5;color:#e5e7eb;margin:0 0 30px}
+.mock-facts{display:flex;gap:28px;align-items:center;margin-bottom:27px;color:#fff}
+.mock-facts div{font-size:1rem}
+.mock-facts div::first-letter{color:#00d84a}
+.mock-cta{display:flex;width:435px;justify-content:space-between;align-items:center;background:#00d84a;color:#fff;text-decoration:none;font-size:1.25rem;font-weight:800;padding:20px 28px;border-radius:7px}
+.mock-cta:hover{background:#00c742}
+.mock-tag{margin-top:16px;color:#d1d5db;font-size:.9rem}
+.mock-arrow{position:absolute;z-index:3;top:48%;border:0;background:rgba(0,0,0,.25);color:#fff;font-size:3.2rem;width:54px;height:74px;line-height:60px;cursor:pointer}
+.mock-left{left:0;border-radius:0 35px 35px 0}.mock-right{right:0;border-radius:35px 0 0 35px}
+.mock-dots{position:absolute;z-index:3;bottom:24px;left:50%;transform:translateX(-50%);display:flex;gap:9px}
+.mock-dots i,.mock-dots b{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,.35)}
+.mock-dots b{background:#fff}
+@media(max-width:1050px){
+ .mock-contact{display:none}.mock-brand{width:260px;flex-basis:260px}
+}
+@media(max-width:760px){
+ .mock-header{height:82px}.mock-header-inner{gap:10px}.mock-brand{width:185px;flex-basis:185px}
+ .mock-about{display:none}.mock-contact-btn{margin-left:auto;padding:10px 15px;font-size:.8rem}
+ .mock-hero{min-height:720px;background:linear-gradient(90deg,rgba(4,13,24,.92),rgba(4,13,24,.62)),url('../images/hero-construction.jpg') 62% center/cover no-repeat,linear-gradient(120deg,#071522,#27424a)}
+ .mock-hero-content{padding-top:58px;width:86%}
+ .mock-kicker{font-size:.68rem}.mock-hero h1{font-size:clamp(2.4rem,11vw,3.5rem)}
+ .mock-hero h2{font-size:1.15rem}.mock-lead{font-size:.92rem}.mock-lead br{display:none}
+ .mock-facts{gap:12px;flex-wrap:wrap;font-size:.8rem}.mock-facts div{font-size:.8rem}
+ .mock-cta{width:100%;font-size:1rem;padding:17px 20px}.mock-arrow{display:none}
+}
