@@ -1341,3 +1341,37 @@ a.link-arrow{color:var(--accent-green)!important}
   visibility:visible!important;
   opacity:1!important;
 }
+
+
+/* Refined hero navigation */
+.mock-about{
+  color:#fff!important;
+  font-size:1rem!important;
+  font-weight:500!important;
+  text-decoration:none!important;
+  opacity:.88;
+  padding:12px 18px!important;
+  transition:opacity .2s ease,color .2s ease;
+}
+.mock-about:hover{opacity:1;color:#00D84A!important}
+
+.mock-contact-btn{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-height:48px!important;
+  padding:0 24px!important;
+  border:1.5px solid #00D84A!important;
+  border-radius:14px!important;
+  background:transparent!important;
+  color:#fff!important;
+  font-size:1rem!important;
+  font-weight:650!important;
+  text-decoration:none!important;
+  box-shadow:none!important;
+  transition:background .2s ease,color .2s ease;
+}
+.mock-contact-btn:hover{
+  background:#00D84A!important;
+  color:#061016!important;
+}
