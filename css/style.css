@@ -1278,3 +1278,22 @@ a.link-arrow{color:var(--accent-green)!important}
  .mock-brand img{height:60px!important}
  .mock-hero{height:auto!important;min-height:calc(100vh - 82px)!important;background-position:center!important}
 }
+
+
+/* Use committed ECS hero photograph */
+.mock-hero{
+  background-image:
+    linear-gradient(90deg,rgba(3,12,22,.94) 0%,rgba(3,12,22,.76) 40%,rgba(3,12,22,.22) 72%),
+    url("../images/ecs-hero.png")!important;
+  background-size:cover!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+}
+@media(max-width:760px){
+  .mock-hero{
+    background-image:
+      linear-gradient(90deg,rgba(3,12,22,.92),rgba(3,12,22,.58)),
+      url("../images/ecs-hero.png")!important;
+    background-position:62% center!important;
+  }
+}
