@@ -1202,3 +1202,12 @@ a.link-arrow{color:var(--accent-green)!important}
  .exact-hero .ecs-hero-facts span{font-size:.78rem!important}
  .exact-hero .ecs-hero-facts i{font-size:1.35rem!important;margin-bottom:6px!important}
 }
+
+/* Company name in top contact bar */
+.top-company-name{font-weight:900;letter-spacing:.035em;color:#fff;white-space:nowrap;margin-right:22px}
+.contact-bar-inner{justify-content:flex-start!important;gap:22px}
+.contact-bar-phones{margin-left:auto}
+@media(max-width:760px){
+ .top-company-name{font-size:.72rem;margin-right:0}
+ .contact-bar-inner{gap:6px!important}
+}
