@@ -1297,3 +1297,33 @@ a.link-arrow{color:var(--accent-green)!important}
     background-position:62% center!important;
   }
 }
+
+
+/* Header brand fix: render brand natively, no white logo rectangle */
+.mock-brand-text{
+  display:flex!important;align-items:center!important;gap:14px!important;
+  width:auto!important;flex:0 0 auto!important;color:#fff!important;
+  text-decoration:none!important;white-space:nowrap!important;
+}
+.mock-av{
+  display:block;font-size:3.35rem;font-weight:900;font-style:italic;
+  line-height:.8;letter-spacing:-.09em;color:#fff;
+}
+.mock-brand-words{display:flex;flex-direction:column;line-height:1.02}
+.mock-brand-words strong{font-size:1.18rem;letter-spacing:.02em;font-weight:600}
+.mock-brand-words small{
+  margin-top:8px;font-size:.46rem;letter-spacing:.25em;
+  font-weight:500;color:#cbd5e1;
+}
+@media(max-width:1050px){
+ .mock-brand-text{gap:10px!important}
+ .mock-av{font-size:2.7rem}
+ .mock-brand-words strong{font-size:.94rem}
+ .mock-brand-words small{font-size:.38rem;letter-spacing:.16em}
+}
+@media(max-width:760px){
+ .mock-brand-text{width:auto!important;flex-basis:auto!important}
+ .mock-av{font-size:2.2rem}
+ .mock-brand-words strong{font-size:.76rem}
+ .mock-brand-words small{display:none}
+}
