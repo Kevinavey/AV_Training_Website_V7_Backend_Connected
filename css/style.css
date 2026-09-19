@@ -1163,3 +1163,12 @@ a.link-arrow{color:var(--accent-green)!important}
  }
  .exact-hero{min-height:720px!important;padding-top:54px!important}
 }
+
+/* User requested ~50% smaller hero heading */
+@media (min-width: 761px){
+ .exact-hero h1{
+   font-size:clamp(2.25rem,3.05vw,3.15rem)!important;
+   line-height:1.02!important;
+   max-width:620px!important;
+ }
+}
