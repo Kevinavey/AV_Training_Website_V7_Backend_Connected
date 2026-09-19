@@ -1085,3 +1085,30 @@ button:disabled {
  .exact-hero .ecs-hero-facts{grid-template-columns:1fr 1fr}
  .exact-hero .ecs-hero-facts div{padding:16px;min-height:105px}
 }
+
+/* Unified vivid green accent requested 2026-09-19 */
+:root{--accent-green:#00d84a;--accent-green-dark:#00c742}
+.exact-hero h1 span,
+.exact-hero .ecs-kicker,
+.exact-hero .ecs-hero-facts i,
+.eyebrow,
+.course-card .eyebrow,
+a.link-arrow{color:var(--accent-green)!important}
+.exact-hero .ecs-hero-cta,
+.btn-primary,
+.course-card .btn,
+.course-card .btn-primary,
+#onlineCourseDates .btn,
+#onlineCourseDates button{
+ background:var(--accent-green)!important;
+ border-color:var(--accent-green)!important;
+ color:#fff!important
+}
+.exact-hero .ecs-hero-cta:hover,
+.btn-primary:hover,
+.course-card .btn:hover,
+#onlineCourseDates .btn:hover,
+#onlineCourseDates button:hover{
+ background:var(--accent-green-dark)!important;
+ border-color:var(--accent-green-dark)!important
+}
