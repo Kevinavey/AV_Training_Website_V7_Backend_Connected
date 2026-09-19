@@ -1147,3 +1147,19 @@ a.link-arrow{color:var(--accent-green)!important}
  }
  .exact-hero{min-height:800px!important;padding-top:64px!important}
 }
+
+/* Final compact desktop hero scale */
+@media (min-width: 761px){
+ .exact-hero h1{
+   font-size:clamp(2.9rem,4.15vw,4.25rem)!important;
+   line-height:.98!important;
+   max-width:700px!important;
+   margin-bottom:22px!important;
+ }
+ .exact-hero .ecs-hero-lead{
+   font-size:1.02rem!important;
+   line-height:1.5!important;
+   max-width:760px!important;
+ }
+ .exact-hero{min-height:720px!important;padding-top:54px!important}
+}
