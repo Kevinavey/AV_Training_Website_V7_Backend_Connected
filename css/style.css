@@ -1259,3 +1259,22 @@ a.link-arrow{color:var(--accent-green)!important}
  .mock-facts{gap:12px;flex-wrap:wrap;font-size:.8rem}.mock-facts div{font-size:.8rem}
  .mock-cta{width:100%;font-size:1rem;padding:17px 20px}.mock-arrow{display:none}
 }
+
+/* Fix approved mockup rendering: force photographic hero + compact dark header */
+.mock-header{height:108px!important;background:#071018!important}
+.mock-header-inner{width:92%!important;max-width:none!important;margin:0 auto!important}
+.mock-brand{width:360px!important;flex:0 0 360px!important}
+.mock-brand img{width:100%!important;height:82px!important;object-fit:contain!important;filter:brightness(0) invert(1)!important}
+.mock-hero{
+ height:calc(100vh - 108px)!important;min-height:700px!important;
+ background-image:linear-gradient(90deg,rgba(3,12,22,.94) 0%,rgba(3,12,22,.76) 40%,rgba(3,12,22,.22) 72%),url("../images/ecs-card.jpg")!important;
+ background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important;
+}
+.mock-hero-content{width:89%!important;max-width:none!important;margin:0 auto!important;padding-top:76px!important}
+.mock-hero h1{font-size:clamp(3.1rem,4.5vw,4.9rem)!important;line-height:1.01!important;max-width:920px!important}
+.mock-lead{max-width:650px!important}
+@media(max-width:760px){
+ .mock-header{height:82px!important}.mock-brand{width:190px!important;flex-basis:190px!important}
+ .mock-brand img{height:60px!important}
+ .mock-hero{height:auto!important;min-height:calc(100vh - 82px)!important;background-position:center!important}
+}
