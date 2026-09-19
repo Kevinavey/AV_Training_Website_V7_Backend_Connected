@@ -1112,3 +1112,24 @@ a.link-arrow{color:var(--accent-green)!important}
  background:var(--accent-green-dark)!important;
  border-color:var(--accent-green-dark)!important
 }
+
+/* Force approved bright green on dynamically generated course cards */
+.date-card .btn.btn-primary,
+.date-card a.btn.btn-primary,
+.date-card button.btn.btn-primary,
+#onlineCourseDates .date-card .btn.btn-primary,
+#classroomCourseDates .date-card .btn.btn-primary{
+ background:#00d84a!important;
+ background-color:#00d84a!important;
+ border-color:#00d84a!important;
+ color:#fff!important;
+ box-shadow:none!important;
+}
+.date-card .btn.btn-primary:hover,
+#onlineCourseDates .date-card .btn.btn-primary:hover,
+#classroomCourseDates .date-card .btn.btn-primary:hover{
+ background:#00c742!important;
+ background-color:#00c742!important;
+ border-color:#00c742!important;
+}
+.date-card .date-label{color:#00d84a!important}
