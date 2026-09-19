@@ -1133,3 +1133,17 @@ a.link-arrow{color:var(--accent-green)!important}
  border-color:#00c742!important;
 }
 .date-card .date-label{color:#00d84a!important}
+
+/* Refine hero typography scale */
+@media (min-width: 761px){
+ .exact-hero h1{
+   font-size:clamp(3.5rem,5.25vw,5.35rem)!important;
+   line-height:.94!important;
+   max-width:780px!important;
+ }
+ .exact-hero .ecs-hero-lead{
+   font-size:1.12rem!important;
+   max-width:800px!important;
+ }
+ .exact-hero{min-height:800px!important;padding-top:64px!important}
+}
